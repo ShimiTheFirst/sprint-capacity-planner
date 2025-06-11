@@ -3,6 +3,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Theme transition for smooth dark/light mode transitions */
+:root {
+  transition: color 350ms ease, background-color 350ms ease, border-color 350ms ease;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

@@ -9,6 +9,7 @@ import {
   navigationMenuTriggerStyle,
 } from '~/components/ui/navigation-menu'
 import { usePathname } from 'next/navigation'
+import { ThemeToggle } from './ThemeToggle'
 
 export function Navigation() {
   const pathname = usePathname()
@@ -20,24 +21,27 @@ export function Navigation() {
   ]
 
   return (
-    <NavigationMenu className='mb-6'>
-      <NavigationMenuList>
-        {navItems.map((item) => (
-          <NavigationMenuItem key={item.href}>
-            <Link href={item.href} legacyBehavior passHref>
-              <NavigationMenuLink
-                className={navigationMenuTriggerStyle()}
-                active={
-                  pathname === item.href ||
-                  (item.href === '/sprints' && pathname.startsWith('/sprints/'))
-                }
-              >
-                {item.label}
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-        ))}
-      </NavigationMenuList>
-    </NavigationMenu>
+    <div className="flex items-center justify-between mb-6">
+      <NavigationMenu>
+        <NavigationMenuList>
+          {navItems.map((item) => (
+            <NavigationMenuItem key={item.href}>
+              <Link href={item.href} legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={navigationMenuTriggerStyle()}
+                  active={
+                    pathname === item.href ||
+                    (item.href === '/sprints' && pathname.startsWith('/sprints/'))
+                  }
+                >
+                  {item.label}
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+          ))}
+        </NavigationMenuList>
+      </NavigationMenu>
+      <ThemeToggle />
+    </div>
   )
 }
