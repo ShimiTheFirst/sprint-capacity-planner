@@ -22,7 +22,7 @@ export function Navigation() {
   ]
 
   return (
-    <nav className="flex items-center justify-between mb-6" aria-label="Main navigation">
+    <nav className='flex items-center justify-between mb-6' aria-label='Main navigation'>
       <NavigationMenu>
         <NavigationMenuList>
           {navItems.map((item) => (
@@ -43,6 +43,6 @@ export function Navigation() {
         </NavigationMenuList>
       </NavigationMenu>
       <ThemeToggle />
-    </div>
+    </nav>
   )
 }
