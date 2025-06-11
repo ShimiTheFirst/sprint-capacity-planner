@@ -22,7 +22,7 @@ export function Navigation() {
   ]
 
   return (
-    <div className="flex items-center justify-between mb-6">
+    <nav className="flex items-center justify-between mb-6" aria-label="Main navigation">
       <NavigationMenu>
         <NavigationMenuList>
           {navItems.map((item) => (
