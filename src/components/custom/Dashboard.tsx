@@ -75,6 +75,13 @@ export function Dashboard() {
                 <Tooltip 
                   formatter={(value: number) => [`${value.toFixed(1)}%`, 'Workload']}
                   labelFormatter={(label) => `Client: ${label}`}
+                  contentStyle={{ 
+                    backgroundColor: 'var(--popover)', 
+                    color: 'var(--popover-foreground)',
+                    borderRadius: 'var(--radius-md)',
+                    border: '1px solid var(--border)'
+                  }}
+                  cursor={{ fill: 'var(--accent)' }}
                 />
                 <Bar dataKey="percentage" fill="var(--primary)" name="Workload %" />
               </BarChart>
