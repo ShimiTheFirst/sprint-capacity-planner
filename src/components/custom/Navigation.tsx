@@ -15,6 +15,7 @@ export function Navigation() {
   const pathname = usePathname()
 
   const navItems = [
+    { href: '/', label: 'Dashboard' },
     { href: '/team-members', label: 'Team Members' },
     { href: '/sprints', label: 'Sprints' },
     { href: '/current-sprint', label: 'Current Sprint' },
