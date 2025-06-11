@@ -26,9 +26,6 @@ export function ThemeToggle(): React.ReactElement {
       ) : (
         <MoonIcon className="h-5 w-5" />
       )}
-      <span className="sr-only">
-        {theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
-      </span>
     </Button>
   )
 }
